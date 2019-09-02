@@ -8,12 +8,18 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from 'ngApp/token-interceptor.service';
 import { AuthService } from './auth.service';
+import { MyprofileComponent } from './myprofile/myprofile.component';
+import { EditmyprofileComponent } from './editmyprofile/editmyprofile.component';
+import { AddwedComponent } from './addwed/addwed.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    DashboardComponent
+    DashboardComponent,
+    MyprofileComponent,
+    EditmyprofileComponent,
+    AddwedComponent
   ],
   imports: [
     BrowserModule,

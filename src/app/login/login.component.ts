@@ -18,7 +18,6 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser(){
-
     console.log("In logincomponent" + this.loginUserData )
     this._auth.loginUser(this.loginUserData).subscribe(
       res => {

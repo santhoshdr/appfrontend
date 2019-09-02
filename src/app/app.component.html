@@ -16,7 +16,18 @@
     <ul class="navbar-nav">
         <a class="nav-link"  routerLink="/login" routerLinkActive="active">Login</a>
         <a class="nav-link"  routerLink="/register" routerLinkActive="active">Register</a>
-        <a class="nav-link" style="cursor:pointer"  (click)="_authService.logoutUser()">Logout</a>        
+        <a class="nav-link" style="cursor:pointer"  (click)="logoutUser()">Logoutin appcomponent</a>  
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Welcome User</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" style="cursor:pointer"  (click)="getMyprofile()">MyProfile</a> 
+            <a class="dropdown-item" style="cursor:pointer"  (click)="addWed()">Add Wed</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#three">three</a>
+          </div>
+        </li>
     </ul>
   </div>
 </nav>    

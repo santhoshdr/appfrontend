@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   registerUser(){
         this._auth.registerUser(this.registrationData).subscribe(
         res => console.log(res),
-        err => console.log(err)
+        err => console.log("============" + err)
 )
 
 

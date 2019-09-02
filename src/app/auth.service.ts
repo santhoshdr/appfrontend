@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http'
+import { Router } from '@angular/router';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -16,7 +17,7 @@ export class AuthService {
 
 private _registerUrl = "http://localhost:8085/guest/addUser"
 private _loginURL= 'http://localhost:8085/api/auth/signin'
-constructor(private httpClient : HttpClient) {}
+constructor(private httpClient : HttpClient,private _route: Router) {}
 
 
   registerUser(registrationData: {}): any {
@@ -38,6 +39,13 @@ constructor(private httpClient : HttpClient) {}
 
 loggedIn(){
   return !!localStorage.getItem("accessToken")
+
 }
 
+
+logoutUser(){
+  localStorage.removeItem("accessToken");
+  this._route.navigate(['/login']);
+
+}
 }
